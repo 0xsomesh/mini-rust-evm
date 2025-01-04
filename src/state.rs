@@ -3,22 +3,22 @@ use crate::memory::Memory;
 use crate::storage::Storage;
 
 pub struct State {
-    stack: Stack<[u8; 32]>, 
-    memory: Memory,
-    storage: Storage,
-    pc: usize,
+    pub stack: Stack<[u8; 32]>, 
+    pub memory: Memory,
+    pub storage: Storage,
+    pub pc: usize,
 
-    sender: String,
-    program: Vec<u8>,
-    gas: u64,
-    value: u128,
-    calldata: Vec<u8>,
+    pub sender: String,
+    pub program: Vec<u8>,
+    pub gas: u64,
+    pub value: u128,
+    pub calldata: Vec<u8>,
 
-    stop_flag: bool,
-    revert_flag: bool,
+    pub stop_flag: bool,
+    pub revert_flag: bool,
 
-    return_data: Vec<u8>,
-    logs: Vec<String>
+    pub return_data: Vec<u8>,
+    pub logs: Vec<String>
 }
 
 impl State {
